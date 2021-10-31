@@ -13,6 +13,7 @@ import PrivateRoute from './firebase/PrivateRoute';
 import Shidule from './components/Shidule/Shidule';
 import ControlOrders from './components/ControlOrders/ControlOrders';
 import TourDetails from './components/TourDetails/TourDetails';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -51,10 +52,12 @@ function App() {
             <PrivateRoute path='/details/:id'>
               <TourDetails></TourDetails>
             </PrivateRoute>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
-
       </AuthProvider>
     </div>
   );
