@@ -6,7 +6,7 @@ const SingleOrder = (props) => {
 
 
    return (
-      <div>
+      <div className='my-3'>
          <div className='card-style mx-5'>
             <h2>Stuts : <span className={!(stutus === 'Approved') ? 'text-danger' : 'text-success'}>{stutus}</span></h2>
             <div className='row row-cols-lg-3'>

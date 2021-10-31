@@ -26,7 +26,7 @@ const Shidule = () => {
          .then(data => {
             console.log(data)
             setOrder(true)
-            !data.upsertedCount > 0 ? alert('Succefully Placed Order') : alert('Something Wrong..!!!');
+            !(data.upsertedCount || data.matchedCount) > 0 ? alert('Succefully Placed Order') : alert('Something Wrong..!!!');
          })
       reset();
    }
