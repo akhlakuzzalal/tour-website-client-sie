@@ -10,7 +10,7 @@ const TourDetails = () => {
 
    console.log(id)
    useEffect(() => {
-      fetch(`http://localhost:5000/details/${id}`)
+      fetch(`https://frightening-goosebumps-40936.herokuapp.com/details/${id}`)
          .then(res => res.json())
          .then(data => setDetails(data))
    }, [])

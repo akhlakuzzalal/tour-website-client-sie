@@ -5,7 +5,7 @@ const Buses = () => {
    const [buses, setBuses] = useState([]);
 
    useEffect(() => {
-      fetch('http://localhost:5000/buses')
+      fetch('https://frightening-goosebumps-40936.herokuapp.com/buses')
          .then(res => res.json())
          .then(data => {
             setBuses(data);
