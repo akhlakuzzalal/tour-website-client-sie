@@ -12,6 +12,7 @@ import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './firebase/PrivateRoute';
 import Shidule from './components/Shidule/Shidule';
 import ControlOrders from './components/ControlOrders/ControlOrders';
+import TourDetails from './components/TourDetails/TourDetails';
 
 function App() {
   return (
@@ -44,8 +45,11 @@ function App() {
             <PrivateRoute path='/shidule'>
               <Shidule></Shidule>
             </PrivateRoute>
-            <PrivateRoute to='/order/control'>
+            <PrivateRoute path='/order/control'>
               <ControlOrders></ControlOrders>
+            </PrivateRoute>
+            <PrivateRoute path='/details/:id'>
+              <TourDetails></TourDetails>
             </PrivateRoute>
           </Switch>
           <Footer></Footer>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useCart from '../../Hooks/useCart';
 import './tour.css';
 
 const Tour = (props) => {
    const { setCart } = useCart();
-   const { name, Price, img } = props.tour;
+   const { name, Price, img, _id } = props.tour;
    const [show, setShow] = useState(false);
    const handleClose = () => setShow(false);
 
@@ -19,6 +20,7 @@ const Tour = (props) => {
    };
 
 
+
    return (
       <div className='mt-3'>
          <div className='col card-style py-3'>
@@ -28,7 +30,8 @@ const Tour = (props) => {
             <div>
                <h3>{name}</h3>
                <h5>Tour Cost: {Price}</h5>
-               <button onClick={handlePurches} className="btn btn-info">Purches Tour</button>
+               <button onClick={handlePurches} className="btn btn-info me-2">Purches Tour</button>
+               <Link className='btn btn-success' to={`details/${_id}`}>Details</Link>
             </div>
          </div>
          <Modal show={show} onHide={handleClose} animation={false}>

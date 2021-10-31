@@ -24,7 +24,8 @@ const AddService = () => {
             <div className='w-50 border border-success p-3 border-3 rounded'>
                <input className='form-control mb-2 border border-info' {...register('name')} placeholder='Servive Name' />
                <input className='form-control mb-2 border border-info' {...register('Price')} type='number' placeholder='price' />
-               <input className='form-control mb-2 border border-info' {...register('img')} type='url' placeholder='image Url' />
+               <input className='form-control mb-2 border borer-info' {...register('img')} type='url' placeholder='image Url' />
+               <textarea className='form-control mb-2 border borer-info' {...register('description')} type='text' placeholder='Describe about the Tour' />
                <input className='btn btn-info' type="submit" />
             </div>
          </form>
